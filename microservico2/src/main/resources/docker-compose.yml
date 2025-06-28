@@ -1,0 +1,20 @@
+version: '3.8' # Se recomienda usar la última versión estable, 3.8 es una buena elección
+
+services:
+  gateway:
+    build:
+      context: ./gateway-service # Ruta donde se encuentra el proyecto de Spring Cloud Gateway
+    ports:
+      - "8080:8080" # Mapea el puerto 8080 del contenedor al puerto 8080 de tu máquina
+
+#  microservice1:
+#    build:
+#      context: ./microservice1-app # Ruta donde se encuentra el primer microservicio
+#    ports:
+#      - "8081:8081" # Mapea el puerto 8081 del contenedor al puerto 8081 de tu máquina
+#
+#  microservice2:
+#    build:
+#      context: ./microservice2-app # Ruta donde se encuentra el segundo microservicio
+#    ports:
+#      - "8082:8082" # Mapea el puerto 8082 del contenedor al puerto 8082 de tu máquina
